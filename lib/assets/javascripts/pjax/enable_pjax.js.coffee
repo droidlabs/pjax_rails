@@ -7,11 +7,9 @@ $ ->
       $this = $(this)
       if $this.data('pjax-direction')
         direction = $this.data('pjax-direction')
-        $('#page-container').hide "slide",
-          direction: (direction is 'right' then 'left' else 'right')
+        $('#page-container').hide "slide", direction: (direction is 'right' then 'left' else 'right')
     complete: ->
       $(document).trigger('end.pjax')
       $this = $(this)
       if $this.data('pjax-direction')
-        $('#page-container').show "slide",
-          direction: $this.data('pjax-direction')
+        $('#page-container').show "slide", direction: $this.data('pjax-direction')
