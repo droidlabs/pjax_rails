@@ -1,5 +1,5 @@
 $ ->
-  selector = 'a[href]:not([data-remote]):not([data-method]):not([data-behavior]):not([data-skip-pjax]):not([href="#"]):not([href="javascript:void(0)"])'
+  selector = 'a[href]:not([data-remote]):not([data-method]):not([data-behavior]):not([data-skip-pjax]):not([href="#"]):not([href*="javascript:"])'
   $(selector).pjax '[data-pjax-container]',
     beforeSend: (xhr)->
       $(document).trigger('start.pjax')
